@@ -1,0 +1,25 @@
+{
+  "name": "task-electron-app",
+  "version": "1.0.0",
+  "description": "Application de bureau pour le gestionnaire de tâches du Lambdavers",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-packager . --overwrite --platform=win32 --arch=x64 --icon=favicon.ico --prune=true --out=release-builds",
+    "build-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=favicon.ico --prune=true --out=release-builds",
+    "installer-linux": "electron-installer-debian --src release-builds/task-electron-app-linux-x64/ --dest release-builds/installers/ --arch amd64"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lambdavers/task-electron-app.git"
+  },
+  "author": "Le_Mocha",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Lambdavers/task-electron-app/issues"
+  },
+  "homepage": "https://github.com/Lambdavers/task-electron-app#readme",
+  "devDependencies": {
+    "electron": "^18.2.3"
+  }
+}
